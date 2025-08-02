@@ -1,11 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lumora Tech</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HiPortfolio Homepage Replica</title>
+  <link rel="stylesheet" href="assets/styles/main.css">
+
 </head>
 <body>
-    <h1>Hello world</h1>
+  <!-- Header -->
+  <header class="header-row">
+    <div class="logo">
+      <img src="assets/images/logo/favicon.png" alt="Logo">
+      <div class="tagline"><b>Lumora Tech →</b></div>
+      
+    </div>
+   
+  
+
+  <!-- Navbar & Alert Banner -->
+  <div class="nav-container">
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#"><b>About Us</b></a></li>
+        <li><a href="#"><b>Our Work</b></a></li>
+        <li><a href="#"><b>Services</b></a></li>
+        <li><a href="#"><b>Shop</b></a></li>
+        <li><a href="#"><b>Careers</b></a></li>
+      </ul>
+    </nav>
+   
+  </div>
+    </header>
+
+  
+  <!-- Hero Section -->
+ <div class="hero">
+<!-- Now these were originally LEFT, moved to RIGHT -->
+<img src="assets/images/photo/computer-engineer.png" class="floating-img img-right-1" alt="Left Image 1">
+<img src="assets/images/photo/mobile-phone.png" class="floating-img img-right-2" alt="Left Image 2">
+<img src="assets/images/photo/computer.png" class="floating-img img-right-3" alt="Left Image 3">
+
+<!-- Now these were originally RIGHT, moved to LEFT -->
+<img src="assets/images/photo/smartphone.png" class="floating-img img-left-1" alt="Right Image 1">
+<img src="assets/images/photo/laptop.png"  class="floating-img img-left-2" alt="Right Image 2">
+<img src="assets/images/photo/smartphone (1).png" class="floating-img img-left-3" alt="Right Image 3">
+
+
+    <!-- Hero Content -->
+    <h1>We Design Fearlessly,<br>Stand Out Effortlessly.</h1>
+    <p>We break the mold — and the competition’s spirit. Also, guess what? We’re just getting started.</p>
+    <button class="cta-button">See Why We’re Not Faking It</button>
+  </div>
+
+    
+
+    </div>
+</section>
+
+
+  <!-- Trusted Logos Section -->
+<section class="trusted-carousel">
+  <p class="trusted-title">Trusted by 100+ companies →</p>
+  <div class="carousel-wrapper">
+    <div class="carousel-track" id="carousel-track">
+      <div class="carousel-item"><img src="assets/images/logo/apple-300x300.jpg" alt="Logo 1" /></div>
+      <div class="carousel-item"><img src="assets/images/logo/ibm-300x135.jpg" alt="Logo 2" /></div>
+      <div class="carousel-item"><img src="assets/images/logo/amazon-300x78.jpg" alt="Logo 3" /></div>
+      <div class="carousel-item"><img src="assets/images/logo/google-300x133.jpg" alt="Logo 4" /></div>
+      <div class="carousel-item"><img src="assets/images/logo/galati-romania-april-29-2023-600nw-2295394661.webp" alt="Logo 5" /></div>
+      
+      
+
+      <!-- Clones for seamless looping -->
+      <div class="carousel-item"><img src="assets/images/logo/images.png" alt="Logo 1" /></div>
+      <div class="carousel-item"><img src="assets/images/logo/ibm-300x135.jpg" alt="Logo 2" /></div>
+      <div class="carousel-item"><img src="assets/images/logo/amazon-300x78.jpg" alt="Logo 3" /></div>
+      <div class="carousel-item"><img src="assets/images/logo/google-300x133.jpg" alt="Logo 4" /></div>
+      <div class="carousel-item"><img src="assets/images/logo/png-transparent-linkedin-logo-linkedin-logo-computer-icons-business-symbol-linkedin-icon-miscellaneous-blue-angle-thumbnail.png" alt="Logo 5" /></div>
+  
+    
+
+    </div>
+  </div>
+</section>
+
+<script>
+  const track = document.getElementById("carousel-track");
+  const items = track.querySelectorAll(".carousel-item");
+  const totalItems = items.length / 2; // only count original items
+
+  let index = 0;
+
+  function moveCarousel() {
+    index++;
+    const itemWidth = items[0].offsetWidth;
+
+    track.style.transition = "transform 0.6s ease-in-out";
+    track.style.transform = `translateX(-${index * itemWidth}px)`;
+
+    // Reset loop when original items fully shifted
+    if (index === totalItems) {
+      setTimeout(() => {
+        track.style.transition = "none";
+        track.style.transform = "translateX(0)";
+        index = 0;
+      }, 600); // matches transition duration
+    }
+  }
+
+  setInterval(moveCarousel, 2500); // Slide every 2.5 seconds
+</script>
+
+
+<!--service head-->
+<section class="services-header">
+  <div class="services-heading">
+    <h1>Our Services — Everything<br> you didn’t know you needed</h1>
+    <a href="#services" class="learn-more-btn">Learn More</a>
+  </div>
+</section>
+
+
+
+
+  <!-- Services Section -->
+ <div class="grid-container">
+    <div class="boxes green">
+      <h2>Website Design & Development</h2>
+      <p>Building websites that don’t just sit pretty — also converts users to paying customers.
+
+</p>
+    </div>
+
+    <div class="box yellow">
+      <h2>Product Design</h2>
+      <p>Products that'll make you look like you’ve got it all together.</p>
+      
+    </div>
+
+    <div class="box blue">
+      <h2>App Design</h2>
+      <p>Apps that make your users interact like it’s second nature.</p>
+    </div>
+
+    <div class="box pink">
+      <h2>Brand Design</h2>
+      <p>Logos that pop, strategy that slaps, we do it all.</p>
+    </div>
+
+    <div class="box teal">
+      <h2>Marketing Design</h2>
+      <p>No “boost engagement”— our design makes people actually care.</p>
+    </div>
+  </div>
+
 </body>
 </html>

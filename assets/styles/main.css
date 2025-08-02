@@ -1,0 +1,457 @@
+ body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #fff;
+      color: #000;
+    }
+
+    .header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #eee;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+
+    }
+    .logo img {
+      height: 64px;
+      margin-right: 1.75rem;
+      padding-left: 50px;
+    }
+    .tagline {
+    font-style: inherit;
+    font-size: 25px;
+
+    }
+ 
+      
+    
+
+    .header-flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+    }
+
+
+    .main-nav {
+      order: 1;
+      font-size: larger;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      gap: 2rem;
+    }
+    .main-nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: flex-start;
+      padding: 0;
+      margin: 0;
+      gap: 2.5rem;
+    }
+    .main-nav a {
+      text-decoration: none;
+      color: black;
+      font-weight: 500;
+      font-size: 0.95rem;
+       transition: all 0.3s ease;
+    }
+    .main-nav a :hover {
+  
+      background-color: #ded7d8;
+      
+
+    }
+ 
+
+
+
+
+/* ====================hero section ==========================*/
+
+
+
+     body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: white;
+    }
+
+    .hero {
+      position: relative;
+      text-align: center;
+      padding: 100px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .hero h1 {
+      font-size: 64px;
+      font-weight: 900;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #444;
+      margin-bottom: 40px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero .cta-button {
+      background-color: black;
+      color: white;
+      padding: 14px 30px;
+      font-size: 16px;
+      border-radius: 30px;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .hero .cta-button:hover {
+      opacity: 0.8;
+    }
+
+    /* Floating Images */
+    .floating-img {
+      position: absolute;
+      width: 60px;
+      height: auto;
+    }
+
+    .img-right-1 {
+      top: 70px;
+      right: 140px;
+      height: 100px;
+      width: 100px;
+      
+      
+    }
+
+    .img-right-2 {
+      top: 200px;
+      right: 90px;
+        height: 100px;
+      width: 100px;
+    }
+
+    .img-right-3 {
+      top: 330px;
+      right: 140px;
+        height: 100px;
+      width: 100px;
+    }
+
+    .img-left-1 {
+      top: 70px;
+      left: 140px;
+        height: 100px;
+      width: 100px;
+    }
+
+    .img-left-2 {
+      top: 200px;
+      left: 90px;
+        height: 100px;
+      width: 100px;
+    }
+
+    .img-left-3 {
+      top: 330px;
+      left:140px; 
+       height: 100px;
+      width: 100px;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 40px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .floating-img {
+        display: none;
+      }
+    }
+
+/*===========================*/
+
+.trusted-carousel {
+  padding: 60px 20px;
+  background-color: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+
+.trusted-title {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.carousel-wrapper {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  width: max-content;
+  transition: transform 0.6s ease-in-out;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.carousel-item img {
+  max-height: 40px;
+  max-width: 100%;
+  object-fit: contain;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.carousel-item img:hover {
+  opacity: 1;
+}
+
+
+
+
+/*-------------- Services head-------------- */
+
+.services-header {
+  padding: 60px 20px 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.services-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.services-heading h1 {
+  font-family: 'Inter', 'General Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 1000;
+  font-size: 3rem;
+  line-height: 1.2;
+  margin: 0;
+  color: #000;
+  flex: 1;
+  min-width: 250px;
+  min-h ;
+}
+
+.learn-more-btn {
+  padding: 12px 20px;
+  border: 2px solid #000;
+  border-radius: 999px;
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.learn-more-btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+
+/*==============<!-- Services Section -->=================*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: white;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 300px);
+  gap: 20px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.box,
+.boxes {
+  border-radius: 20px;
+  padding: 20px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+  color: #000;
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover; /* Or use: contain, 100% 100% for exact scaling */
+}
+
+/* Optional overlay for better text contrast */
+.boxes
+.box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(164, 154, 154, 0.311);
+  z-index: 1;
+  border-radius: 20px;
+}
+
+.boxes,
+.box h2,
+.box p {
+  position: relative;
+  z-index: 2;
+  
+}
+
+  
+  .box h2 {
+  font-family: 'Poppins', 'Inter', sans-serif;  /* Use strong sans-serif fonts */
+  font-size: 1.9rem;         /* Large size */
+  font-weight: 800;        /* Extra bold */
+  color: #3c3b3b;          /* Solid black */
+  line-height: 1.2;        /* Tight spacing */
+  margin:  0 10px;
+
+}
+  .boxes h2 {
+  font-family: 'Poppins', 'Inter', sans-serif;  /* Use strong sans-serif fonts */
+  font-size: 1.9rem;         /* Large size */
+  font-weight: 800;        /* Extra bold */
+  color: #3c3b3b;          /* Solid black */
+  line-height: 1.2;        /* Tight spacing */
+  margin:  0 10px;
+
+}
+
+  
+
+
+.box p {
+  font-weight: normal;
+  font-size: 1.2rem;
+  position:absolute;
+  padding-top: 35px;
+  color: #444;
+  
+  
+}
+.boxes p {
+  font-weight: normal;
+  font-size: 1.3rem;
+  position:absolute;
+  padding-top: 70px;
+    color: #444;
+
+  
+}
+
+/* Specific box colors + image backgrounds */
+.green {
+  background-image: url("../images/logo/pSRXC6eB4RfXwl8qU6gjsEx8B08.svg");
+  background-color:rgb(20, 217, 20);
+  grid-row: span 2;
+  background-size: 90%; /* Scale the image */
+  background-repeat: no-repeat;
+  background-position: bottom;
+
+}
+
+.yellow {
+  background-color:rgb(245, 194, 10);
+  background-image: url("../images/logo/WhatsApp_Image_2025-08-01_at_11.35.44_5f92dcf7-removebg-preview.png");
+   background-size: 90%; /* Scale the image */
+  background-repeat: no-repeat;
+  background-position: bottom;
+    
+
+  
+}
+
+.blue {
+  background-color:rgb(5, 180, 249);
+  background-image: url('../images/logo/app\ logo.png');
+     background-size: 80%; /* Scale the image */
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+  
+  
+
+
+.pink {
+  background-color: #f121a8;
+  background-image: url('../images/logo/ifjjfjdkdjdjd.svg');
+     background-size: 90%; /* Scale the image */
+  background-repeat: no-repeat;
+  background-position: bottom;
+
+}
+
+.teal {
+  background-color: #128e75;
+  background-image: url('../images/logo/last\ img.avif');
+    background-size: 90%; /* Scale the image */
+  background-repeat: no-repeat;
+  background-position: bottom;
+
+}
+
+@media (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: auto;
+  }
+
+  .green {
+    grid-row: auto;
+  }
+}
