@@ -6,43 +6,60 @@
   <title>HiPortfolio Homepage Replica</title>
   <link rel="stylesheet" href="assets/styles/main.css">
 
+
 </head>
 <body>
+         
+            
   <!-- Header -->
-  <header class="header-row">
-    <div class="logo">
-      <img src="assets/images/logo/favicon.png" alt="Logo">
-      <div class="tagline"><b>Lumora Tech →</b></div>
-      
-    </div>
-   
-  
-
-  <!-- Navbar & Alert Banner -->
-  <div class="nav-container">
-    <nav class="main-nav">
-      <ul>
-        <li><a href="#"><b>About Us</b></a></li>
-        <li><a href="#"><b>Our Work</b></a></li>
-        <li><a href="#"><b>Services</b></a></li>
-        <li><a href="#"><b>Shop</b></a></li>
-        <li><a href="#"><b>Careers</b></a></li>
-      </ul>
-    </nav>
-   
+<header class="header-row">
+  <div class="logo">
+    <img src="assets/images/logo/favicon.png" alt="Logo">
+    <div class="tagline"><b>Lumora Tech →</b></div>
   </div>
-    </header>
+
+  <div class="menu-toggle" id="menu-toggle">☰</div>
+
+  <nav class="main-nav" id="main-nav">
+    <ul>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#work">Our Work</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#shop">Shop</a></li>
+      <li><a href="#careers">Careers</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+<script>
+  const toggle = document.getElementById("menu-toggle");
+  const nav = document.getElementById("main-nav");
+
+  toggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+  });
+</script>
+
+
+
+
+
+
+
+
+
 
   
   <!-- Hero Section -->
  <div class="hero">
 <!-- Now these were originally LEFT, moved to RIGHT -->
-<img src="assets/images/photo/computer-engineer.png" class="floating-img img-right-1" alt="Left Image 1">
+<img src="assets/images/logo/phone kunjanbro.png" class="floating-img img-right-1" alt="Left Image 1">
 <img src="assets/images/photo/mobile-phone.png" class="floating-img img-right-2" alt="Left Image 2">
 <img src="assets/images/photo/computer.png" class="floating-img img-right-3" alt="Left Image 3">
 
 <!-- Now these were originally RIGHT, moved to LEFT -->
-<img src="assets/images/photo/smartphone.png" class="floating-img img-left-1" alt="Right Image 1">
+<img src="assets/images/logo/lap kunjanbro.png" class="floating-img img-left-1" alt="Right Image 1">
 <img src="assets/images/photo/laptop.png"  class="floating-img img-left-2" alt="Right Image 2">
 <img src="assets/images/photo/smartphone (1).png" class="floating-img img-left-3" alt="Right Image 3">
 
@@ -116,7 +133,7 @@
 <!--service head-->
 <section class="services-header">
   <div class="services-heading">
-    <h1>Our Services — Everything<br> you didn’t know you needed</h1>
+    <h1>Our Services — Everything you<br> didn’t know you needed</h1>
     <a href="#services" class="learn-more-btn">Learn More</a>
   </div>
 </section>
@@ -154,6 +171,22 @@
       <p>No “boost engagement”— our design makes people actually care.</p>
     </div>
   </div>
+  <!----about warm sec-->
+<section class="about-wrapper">
+  <div class="about-shade">
+    <div class="about-left">
+      <h1>Who are we?</h1>
+      <h2>Besides Awesome.</h2>
+      <button class="learn-btn">Learn More</button>
+    </div>
+    <div class="about-right">
+      <p>
+        We’re allergic to average and only design for those<br> who dare to stand out.
+        Our team takes your brand <br>from “meh” to “wow” in no time.
+      </p>
+    </div>
+  </div>
+</section>
 
 </body>
 </html>
