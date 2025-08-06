@@ -2,249 +2,212 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
-    <title>Client Cards</title>
-    <style>
-        .card-container {
-  position: relative;
-  overflow: hidden;
-  padding: 100px 20px;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HiPortfolio</title>
+  <link rel="stylesheet" href="assets/styles/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Manrope:wght@400;700&family=Anton&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    :root {
+      --primary-font: 'Manrope', sans-serif;
+      --heading-font: 'Anton', sans-serif;
+    }
 
-.card-container::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 24% 76% 25% 75% / 25% 26% 25% 25%;
-  background: #F5F2F1;
-  z-index: 0;
-}
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: var(--primary-font);
+    }
 
-.main {
-  position: relative;
-  z-index: 1;
-}
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--heading-font);
+      margin: 0 0 1rem;
+    }
 
-/* Heading and Arrows */
-.cont {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  font-family: 'Anton', sans-serif;
-  font-weight: 300;
-  font-size: 50px;
-  line-height: 1em;
-  text-align: center;
-  flex-wrap: wrap;
-  margin-bottom: 100px;
-  flex-wrap: nowrap;     /* ✅ Prevent items from stacking */
-  flex-direction: row; 
-}
+    .card2-container .cards,
+    .card-container .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+    }
 
-.heading-text p {
-  margin: 0;
-}
+    .card {
+      width: 100%;
+      max-width: 350px;
+      box-sizing: border-box;
+    }
 
-.arrow {
-  width: 100px;
-  height: auto;
-}
+    .about-wrapper {
+      padding: 4rem 2rem;
+    }
 
-.arrow-left {
-  transform: rotate(-90deg);
-}
+    .about-shade {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 2rem;
+    }
 
-.arrow-right {
-  transform: rotate(90deg);
-}
+    .about-left, .about-right {
+      flex: 1 1 300px;
+    }
 
-/* Cards Container */
-.cards {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  flex-wrap: wrap;
-  margin-top: 20px;
-  gap: 20px;
-  padding: 0;
-}
+    @media (max-width: 768px) {
+      .hero h1, .hero p, .services-heading h1, .card2-head h1 {
+        text-align: center;
+      }
 
-/* Cards Styles */
-.card1,
-.card2,
-.card3,
-.card4 {
-  width: 280px;
-  min-height: 200px;
-  padding: 16px;
-  margin: 0;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: relative;
-  z-index: 1;
-}
+      .project-btn p, .about-right p {
+        text-align: center;
+      }
 
-.card1 {
-  background-color: rgb(83, 150, 141);
-  transform: rotate(4deg);
-}
+      .card2-head-container {
+        flex-direction: column;
+        align-items: center;
+      }
 
-.card2 {
-  background-color: #F2515A;
-  transform: rotate(4deg);
-  margin-left: -30px;
-  margin-top: -10px;
-  z-index: 2;
-}
-
-.card3 {
-  background-color: #0179FF;
-  transform: rotate(-3deg);
-  margin-left: -30px;
-  z-index: 2;
-}
-
-.card4 {
-  background-color: #00D26D;
-  transform: rotate(3.5deg);
-  margin-left: -25px;
-  z-index: 2;
-  min-height: 180px;
-}
-.bhead {
-    margin-left: 30px;
-  /* text-align: center; */
-  width: 100%;
-  font-size: 24px;
-  font-weight: 600;
-  color: white;
-  position: absolute;
-  bottom: 16px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-
-
-
-
-/* ✅ Responsive Styles */
-@media (max-width: 768px) {
-    .cont {
-    gap: 10px;
-    font-size: 32px;
-  }
-
-  .arrow {
-    width: 60px;
-  }
-  .card-container {
-    padding-bottom: 300px; 
-    overflow-x: hidden;/* Increased space to fit overlapping cards */
-  }
-  .card-container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #F5F2F1;
-    border-radius: 50% / 15%; /* ✅ Oval shape */
-    z-index: 0;
-  }
-
-  .cards {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card1 {
-    transform: rotate(4deg);
-    z-index: 1;
-    margin-top: 0;
-    margin-left: 0;
-    width: 90%;
-  }
-
-  .card2 {
-    transform: rotate(4deg);
-    z-index: 2;
-    margin-top: -40px;
-    margin-left: 0;
-    width: 90%;
-  }
-
-  .card3 {
-    transform: rotate(-3deg);
-    z-index: 3;
-    margin-top: -40px;
-    margin-left: 0;
-    width: 90%;
-  }
-
-  .card4 {
-    transform: rotate(3.5deg);
-    z-index: 4;
-    margin-top: -40px;
-    margin-left: 0;
-    width: 90%;
-  }
-}
-
-    </style>
+      .about-shade {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <div class="card-container">
-        <div class="main">
-            <div class="cont">
-                <img src="./assets/images/arrow.png" alt="Left Arrow" class="arrow arrow-left">
-                <div class="heading-text">
-                  <p>Bragging Rights,</p>
-                  <p>Courtesy of Our Clients</p>
-                </div>
-                <img src="./assets/images/arrow.png" alt="Right Arrow" class="arrow arrow-right">
-              </div>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Empowering Digital Dreams</h1>
+    <p>We craft engaging, innovative, and custom digital experiences that elevate your brand.</p>
+    <button class="cta-button">Get Started</button>
+  </section>
 
-
-            <div class="cards">
-                <div class="card1">
-                    <p>The creative partnership refreshed our identity with modern branding and a sleek Webflow-built
-                        website, perfectly aligning with our innovative Amazon FBA approach</p>
-                    <p class="bhead">NEXUS IX</p>
-                </div>
-
-                <div class="card2">
-                    <p>Dynamic branding and engaging social media campaigns set the stage for our software innovations,
-                        giving our agency a fresh, competitive edge</p>
-                    <p class="bhead">teknotize</p>
-                </div>
-
-                <div class="card3">
-                    <p>Partnering with the team was transformative—they delivered compelling branding, seamless Webflow
-                        development, and intuitive product design that boosted our user experience and performance</p>
-                    <p class="bhead">bSecure</p>
-                </div>
-
-                <div class="card4">
-                    <p>Their expertise in motion design and Webflow turned our banking-as-a-service platform into a
-                        visually captivating and highly functional marketing tool.</p>
-                    <p class="bhead">neem</p>
-                </div>
-            </div>
-        </div>
+  <!-- Trusted Logos Section -->
+  <section class="trusted-carousel">
+    <div class="trusted-title">Trusted By</div>
+    <div class="carousel-wrapper">
+      <div class="carousel-track">
+        <div class="carousel-item"><img src="assets/images/logo1.png" alt="Logo"></div>
+        <div class="carousel-item"><img src="assets/images/logo2.png" alt="Logo"></div>
+        <div class="carousel-item"><img src="assets/images/logo3.png" alt="Logo"></div>
+      </div>
     </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services-header">
+    <div class="services-heading">
+      <h1>Our Services</h1>
+      <a class="learn-more-btn" href="#">Learn More</a>
+    </div>
+  </section>
+
+  <section class="grid-container">
+    <div class="box green"><h2>Branding</h2><p>Crafting identity</p></div>
+    <div class="box yellow"><h2>Web Design</h2><p>Modern aesthetics</p></div>
+    <div class="box blue"><h2>Development</h2><p>Robust code</p></div>
+    <div class="box pink"><h2>Marketing</h2><p>Targeted reach</p></div>
+    <div class="box teal"><h2>Strategy</h2><p>Smart growth</p></div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about-wrapper">
+    <div class="about-shade">
+      <div class="about-left">
+        <h1>Who We Are</h1>
+        <h2>Design. Develop. Deliver.</h2>
+        <button class="learn-btn">Learn More</button>
+      </div>
+      <div class="about-right">
+        <p>We are a team of creative thinkers and problem solvers dedicated to pushing the boundaries of digital design and development.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects (Card2) Section -->
+  <section class="card2-container">
+    <div class="card2-head-container">
+      <div class="card2-head">
+        <h1>Selected Projects</h1>
+      </div>
+      <div class="project-btn">
+        <p>Explore our project case studies</p>
+        <button class="see-btn">See All</button>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card neem"><img src="assets/images/neem.jpg" alt="Neem"><div class="title">Neem</div><p>Banking-as-a-service platform</p><a class="study-btn" href="#">Case Study</a></div>
+      <div class="card bsecure"><img src="assets/images/bsecure.jpg" alt="bSecure"><div class="title">bSecure</div><p>Unified checkout experience</p><a class="study-btn" href="#">Case Study</a></div>
+      <div class="card masjid"><img src="assets/images/masjid.jpg" alt="Masjid"><div class="title">Masjid App</div><p>Community prayer time app</p><a class="study-btn" href="#">Case Study</a></div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="card-container">
+    <div class="main">
+      <div class="cont">
+        <img src="./assets/images/arrow.png" alt="Left Arrow" class="arrow arrow-left">
+        <div class="heading-text">
+          <p>Bragging Rights,</p>
+          <p>Courtesy of Our Clients</p>
+        </div>
+        <img src="./assets/images/arrow.png" alt="Right Arrow" class="arrow arrow-right">
+      </div>
+      <div class="cards">
+        <div class="card1">
+          <p>The creative partnership refreshed our identity with modern branding and a sleek Webflow-built website.</p>
+          <p class="bhead">NEXUS IX</p>
+        </div>
+        <div class="card2">
+          <p>Dynamic branding and engaging social campaigns gave our agency a competitive edge.</p>
+          <p class="bhead">teknotize</p>
+        </div>
+        <div class="card3">
+          <p>They delivered compelling branding, seamless development, and intuitive product design.</p>
+          <p class="bhead">bSecure</p>
+        </div>
+        <div class="card4">
+          <p>Expertise in motion design turned our platform into a captivating tool.</p>
+          <p class="bhead">neem</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-columns">
+      <div class="footer-column">
+        <h3>Company</h3>
+        <ul><li>About</li><li>Team</li><li>Careers</li></ul>
+      </div>
+      <div class="footer-column">
+        <h3>Services</h3>
+        <ul><li>Web Design</li><li>Branding</li><li>Development</li></ul>
+      </div>
+      <div class="footer-column">
+        <h3>Resources</h3>
+        <ul><li>Blog</li><li>Help Center</li><li>Privacy</li></ul>
+      </div>
+      <div class="footer-column subscribe">
+        <h3>Subscribe</h3>
+        <input type="email" placeholder="Your email">
+        <button>Subscribe</button>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 HiPortfolio. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-twitter"></i></a>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>

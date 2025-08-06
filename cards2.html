@@ -2,248 +2,481 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Three Cards</title>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            padding: 50px;
-            /* background: #f0f0f0; */
-            display: flex;
-            justify-content: center;
-            margin: 50px;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HiPortfolio Homepage Replica</title>
+  <link rel="stylesheet" href="assets/styles/main.css">
 
-        .cards {
-            display: flex;
-            gap: 24px;
-            flex-wrap: wrap;
-        }
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
 
-        .card {
-            background: white;
-            border-radius: 20px;
-            padding: 24px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-            max-width: 270px;
-            height: 550px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
-        .card img {
-            width: 100%;
-            height: 300px;
-            /* Increased image height */
-            object-fit: cover;
-            border-radius: 10px;
-            margin-top: 10px;
-        }
+  <style>
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Anton', sans-serif;
+      font-weight: 300;
+      line-height: 1.2;
+      color: #000;
+      margin: 0 0 1rem 0;
+    }
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.75rem; }
+    @media (max-width: 768px) {
+      h1 { font-size: 2rem; }
+      h2 { font-size: 1.5rem; }
+      h3 { font-size: 1.25rem; }
+    }
 
-        .title {
-            font-size: 1.2rem;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
+    /* === Project Cards Section === */
+.card2-container {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
 
-        .card p {
-            font-size: 0.9rem;
-            color: #333;
-            margin-top: 10px;
-            margin-bottom: 6px;
-        }
+.card2-head-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 50px;
+}
 
-        .learn-btn {
-            background: #000;
-            color: #fff;
-            padding: 4px 10px;
-            border-radius: 20px;
-            text-decoration: none;
-            font-size: 0.75rem;
-            display: inline-block;
-            width: fit-content;
-            margin-bottom: 10px;
-            margin-top: 2px;
-        }
+.card2-head h1 {
+  font-family: 'Anton', sans-serif;
+  font-size: 50px;
+  margin: 0;
+}
 
-        .services {
-            font-size: 0.85rem;
-            color: #555;
-            margin-top: auto;
-            /* Pushes this section to the bottom */
-        }
+.project-btn p {
+  font-family: 'Manrope', sans-serif;
+  font-size: 18px;
+  color: #4B4C4D;
+  margin: 0;
+}
 
-        .neem {
-            background-color: #f5f5f5;
-            /* border: 1px solid #f5f5f5; */
-        }
+.see-btn {
+  background: #000;
+  color: #fff;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-top: 10px;
+}
 
-        .neem a {
-            background-color: #E5E5E5;
-            color: black;
-        }
+.cards {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
-        .bsecure {
-            background-color: rgb(228, 240, 252);
-        }
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  max-width: 350px;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
-        .bsecure a {
-            background-color: #CAE5FC;
-            color: black;
-        }
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-top: 10px;
+}
 
-        .masjid {
-            background-color: #f5f5f5;
-        }
+.title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: "Manrope", sans-serif;
+}
 
-        .masjid a {
-            background-color: #E3E1FA;
-            color: black;
-        }
+.study-btn {
+  background: #000;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.75rem;
+  display: inline-block;
+  width: fit-content;
+  margin: 10px 0;
+}
 
-        .card2-head-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            /* align to bottom if needed */
-            flex-wrap: wrap;
-            /* optional, allows wrapping on smaller screens */
-            gap: 10px;
-            margin-bottom: 50px;
+.services {
+  font-size: 0.85rem;
+  color: #555;
+  font-family: "Manrope", sans-serif;
+}
 
-        }
+.neem { background-color: #f5f5f5; }
+.bsecure { background-color: #E4F0FC; }
+.masjid { background-color: #f5f5f5; }
 
-        .card2-head h1 {
-            font-family: 'Anton', sans-serif;
-            font-weight: 300;
-            font-size: 50px;
-            letter-spacing: 0em;
-            margin: 0;
-            line-height: 1em;
-        }
+/* === Testimonials / Card Container Section === */
+.card-container {
+  position: relative;
+  padding: 100px 20px;
+  background: #F5F2F1;
+  border-radius: 60px;
+  margin: 80px auto;
+}
 
-        .project-btn {
-            text-align: right;
-        }
+.cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  font-family: 'Anton', sans-serif;
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 80px;
+}
 
-        .see-btn {
-            background: #000;
-            color: #fff;
-            padding: 6px 14px;
-            border: none;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            cursor: pointer;
-            margin-top: 10px;
-        }
+.arrow {
+  width: 60px;
+  height: auto;
+}
 
-        .project-btn p {
-            font-family: "Manrope", sans-serif;
-            color: #4B4C4D;
-            margin: 0;
-            font-weight: 500;
-            font-size: 18px;
-        }
+.arrow-left {
+  transform: rotate(-90deg);
+}
 
-        .card neem,
-        .card bsecure,
-        .card masjid,
-        .title {
-            font-family: "Manrope", sans-serif;
-            color: black;
-            margin: 0;
-            font-weight: 500;
-            font-size: 18px;
+.arrow-right {
+  transform: rotate(90deg);
+}
 
+.cards .card1,
+.cards .card2,
+.cards .card3,
+.cards .card4 {
+  width: 280px;
+  min-height: 200px;
+  padding: 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
 
-        }
+.card1 { background-color: rgb(83, 150, 141); transform: rotate(4deg); }
+.card2 { background-color: #F2515A; transform: rotate(4deg); margin-left: -30px; z-index: 2; }
+.card3 { background-color: #0179FF; transform: rotate(-3deg); margin-left: -30px; z-index: 2; }
+.card4 { background-color: #00D26D; transform: rotate(3.5deg); margin-left: -25px; z-index: 2; }
 
-        .card neem,
-        .card bsecure,
-        .card masjid,
-        p {
-            font-family: "Manrope", sans-serif;
-            color: #4B4C4D;
-            margin: 0;
-            font-weight: 500;
-            font-size: 18px;
-        }
-            
+.bhead {
+  text-align: center;
+  width: 100%;
+  font-size: 24px;
+  font-weight: 600;
+  color: white;
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
+/* Responsive for cards */
+@media (max-width: 768px) {
+  .card2-head-container {
+    flex-direction: column;
+    align-items: center;
+  }
 
+  .card2-head h1 {
+    font-size: 36px;
+    text-align: center;
+  }
 
+  .project-btn p {
+    text-align: center;
+  }
 
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    </style>
+  .card-container .cards .card1,
+  .card2,
+  .card3,
+  .card4 {
+    margin-left: 0 !important;
+    width: 90%;
+    transform: none;
+  }
+
+  .cont {
+    font-size: 28px;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+  </style>
 </head>
 
 <body>
-    <div class="card2-conatainer">
-        <div class="card2-head-container">
-            <div class="card2-head">
-                <h1>We Made This.</h1>
-                <h1>You’re Welcome.</h1>
-            </div>
-            <div class="project-btn">
-                <p>A curated gallery of projects we </p>
-                <p> crushed.You’re in for a treater</p>
-                <button class="see-btn">See all project</button>
-            </div>
-        </div>
-
-        <div class="cards">
-            <!-- Neem Card -->
-            <div class="card neem">
-                <div>
-                    <div class="title">🟢 neem</div>
-                    <p>Neem is an embedded finance platform enabling financial wellness for growing businesses and
-                        communities.</p>
-                    <a href="#" class="learn-btn">Learn More →</a>
-                    <img src="./assets/images/bg.avif" alt="Neem Image" />
-                </div>
-                <div class="services">
-                    <strong>Services</strong><br>
-                    Brand Identity, Motion Design, Website Design & Development
-                </div>
-            </div>
-
-            <!-- bSecure Card -->
-            <div class="card bsecure">
-                <div>
-                    <div class="title">🔵 bSecure</div>
-                    <p>A one-click checkout solution built to streamline the way people shop and pay across the digital
-                        landscape.</p>
-                    <a href="#" class="learn-btn">Learn More →</a>
-                    <img src="./assets/images/bg2.png" alt="bSecure Image" />
-                </div>
-                <div class="services">
-                    <strong>Services</strong><br>
-                    Brand Strategy, Brand Identity, Product Design, Website Design, Website Development
-                </div>
-            </div>
-
-            <!-- Masjid Card -->
-            <div class="card masjid">
-                <div>
-                    <div class="title">🟣 masjid24</div>
-                    <p>Providing a convenient glance at the accurate prayer timings for mosques near you.</p>
-                    <a href="#" class="learn-btn">Learn More →</a>
-                    <img src="./assets/images/bg3.png" alt="Masjid Image" />
-                </div>
-                <div class="services">
-                    <strong>Services</strong><br>
-                    Brand Strategy, Brand Identity, Website Design, Product Design
-                </div>
-            </div>
-
-        </div>
+  <!-- Header -->
+  <header class="header-row">
+    <div class="logo">
+      <img src="assets/images/logo/favicon.png" alt="Logo">
+      <div class="tagline"><b>Lumora Tech →</b></div>
     </div>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <nav class="main-nav" id="main-nav">
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#work">Our Work</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#shop">Shop</a></li>
+        <li><a href="#careers">Careers</a></li>
+      </ul>
+    </nav>
+  </header>
+  <script>
+    const toggle = document.getElementById("menu-toggle");
+    const nav = document.getElementById("main-nav");
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("active");
+    });
+  </script>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="assets/images/logo/phone kunjanbro.png" class="floating-img img-right-1" alt="Phone">
+    <img src="assets/images/photo/mobile-phone.png" class="floating-img img-right-2" alt="Mobile">
+    <img src="assets/images/photo/computer.png" class="floating-img img-right-3" alt="Computer">
+    <img src="assets/images/logo/lap kunjanbro.png" class="floating-img img-left-1" alt="Laptop">
+    <img src="assets/images/photo/laptop.png" class="floating-img img-left-2" alt="Laptop">
+    <img src="assets/images/photo/smartphone (1).png" class="floating-img img-left-3" alt="Smartphone">
+    <h1>We Design Fearlessly,<br>Stand Out Effortlessly.</h1>
+    <p>We break the mold — and the competition’s spirit. Also, guess what? We’re just getting started.</p>
+    <button class="cta-button">See Why We’re Not Faking It</button>
+  </section>
+
+  <!-- Trusted By Section -->
+  <section class="trusted-carousel">
+    <p class="trusted-title">Trusted by 100+ companies →</p>
+    <div class="carousel-wrapper">
+      <div class="carousel-track" id="carousel-track">
+        <div class="carousel-item"><img src="assets/images/logo/apple-300x300.jpg" alt="Logo"></div>
+        <div class="carousel-item"><img src="assets/images/logo/ibm-300x135.jpg" alt="Logo"></div>
+        <div class="carousel-item"><img src="assets/images/logo/amazon-300x78.jpg" alt="Logo"></div>
+        <div class="carousel-item"><img src="assets/images/logo/google-300x133.jpg" alt="Logo"></div>
+        <div class="carousel-item"><img src="assets/images/logo/galati-romania-april-29-2023-600nw-2295394661.webp" alt="Logo"></div>
+        <div class="carousel-item"><img src="assets/images/logo/images.png" alt="Logo"></div>
+        <div class="carousel-item"><img src="assets/images/logo/ibm-300x135.jpg" alt="Logo"></div>
+        <div class="carousel-item"><img src="assets/images/logo/amazon-300x78.jpg" alt="Logo"></div>
+        <div class="carousel-item"><img src="assets/images/logo/google-300x133.jpg" alt="Logo"></div>
+        <div class="carousel-item"><img src="assets/images/logo/png-transparent-linkedin-logo.png" alt="Logo"></div>
+      </div>
+    </div>
+  </section>
+  <script>
+    const track = document.getElementById("carousel-track");
+    const items = track.querySelectorAll(".carousel-item");
+    const totalItems = items.length / 2;
+    let index = 0;
+    function moveCarousel() {
+      index++;
+      const itemWidth = items[0].offsetWidth;
+      track.style.transition = "transform 0.6s ease-in-out";
+      track.style.transform = `translateX(-${index * itemWidth}px)`;
+      if (index === totalItems) {
+        setTimeout(() => {
+          track.style.transition = "none";
+          track.style.transform = "translateX(0)";
+          index = 0;
+        }, 600);
+      }
+    }
+    setInterval(moveCarousel, 2500);
+  </script>
+
+  <!-- Services Header -->
+  <section class="services-header">
+    <div class="services-heading">
+      <h1>Our Services — Everything you<br> didn’t know you needed</h1>
+      <a href="#services" class="learn-more-btn">Learn More</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about-wrapper">
+    <div class="about-shade">
+      <div class="about-left">
+        <h1>Who are we?</h1>
+        <h2>Besides Awesome.</h2>
+        <button class="learn-btn">Learn More</button>
+      </div>
+      <div class="about-right">
+        <p>We’re allergic to average and only design for those who dare to stand out.<br>Our team takes your brand from “meh” to “wow” in no time.</p>
+      </div>
+    </div>
+  </section>
+   <!-- Project Cards Section -->
+  <section class="card2-container">
+    <div class="card2-head-container">
+      <div class="card2-head">
+        <h1>We Made This.</h1>
+        <h1>You’re Welcome.</h1>
+      </div>
+      <div class="project-btn">
+        <p>A curated gallery of projects we</p>
+        <p>crushed. You’re in for a treat.</p>
+        <button class="see-btn">See all projects</button>
+      </div>
+    </div>
+
+    <div class="cards">
+      <!-- Neem Card -->
+      <div class="card neem">
+        <div>
+          <div class="title">🟢 neem</div>
+          <p>Neem is an embedded finance platform enabling financial wellness for growing businesses and communities.</p>
+          <a href="#" class="study-btn">Learn More →</a>
+          <img src="./assets/images/bg.avif" alt="Neem Image" />
+        </div>
+        <div class="services">
+          <strong>Services</strong><br>
+          Brand Identity, Motion Design, Website Design & Development
+        </div>
+      </div>
+
+      <!-- bSecure Card -->
+      <div class="card bsecure">
+        <div>
+          <div class="title">🔵 bSecure</div>
+          <p>A one-click checkout solution built to streamline the way people shop and pay across the digital landscape.</p>
+          <a href="#" class="study-btn">Learn More →</a>
+          <img src="./assets/images/bg2.png" alt="bSecure Image" />
+        </div>
+        <div class="services">
+          <strong>Services</strong><br>
+          Brand Strategy, Brand Identity, Product Design, Website Design, Website Development
+        </div>
+      </div>
+
+      <!-- Masjid Card -->
+      <div class="card masjid">
+        <div>
+          <div class="title">🟣 masjid24</div>
+          <p>Providing a convenient glance at the accurate prayer timings for mosques near you.</p>
+          <a href="#" class="study-btn">Learn More →</a>
+          <img src="./assets/images/bg3.png" alt="Masjid Image" />
+        </div>
+        <div class="services">
+          <strong>Services</strong><br>
+          Brand Strategy, Brand Identity, Website Design, Product Design
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="about-wrapper">
+    <div class="about-shade">
+      <div class="about-left">
+        <h1>Who are we?</h1>
+        <h2>Besides Awesome.</h2>
+        <button class="learn-btn">Learn More</button>
+      </div>
+      <div class="about-right">
+        <p>We’re allergic to average and only design for those who dare to stand out.<br>Our team takes your brand from “meh” to “wow” in no time.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials / Bragging Rights Section -->
+  <section class="card-container">
+    <div class="main">
+      <div class="cont">
+        <img src="./assets/images/arrow.png" alt="Left Arrow" class="arrow arrow-left">
+        <div class="heading-text">
+          <p>Bragging Rights,</p>
+          <p>Courtesy of Our Clients</p>
+        </div>
+        <img src="./assets/images/arrow.png" alt="Right Arrow" class="arrow arrow-right">
+      </div>
+      <div class="cards">
+        <div class="card1">
+          <p>The creative partnership refreshed our identity with modern branding and a sleek Webflow-built website, perfectly aligning with our innovative Amazon FBA approach</p>
+          <p class="bhead">NEXUS IX</p>
+        </div>
+        <div class="card2">
+          <p>Dynamic branding and engaging social media campaigns set the stage for our software innovations, giving our agency a fresh, competitive edge</p>
+          <p class="bhead">teknotize</p>
+        </div>
+        <div class="card3">
+          <p>Partnering with the team was transformative—they delivered compelling branding, seamless Webflow development, and intuitive product design that boosted our user experience and performance</p>
+          <p class="bhead">bSecure</p>
+        </div>
+        <div class="card4">
+          <p>Their expertise in motion design and Webflow turned our banking-as-a-service platform into a visually captivating and highly functional marketing tool.</p>
+          <p class="bhead">neem</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-columns">
+      <div class="footer-column">
+        <img src="assets/images/logo/favicon.png" alt="Logo" width="80" />
+      </div>
+      <div class="footer-column">
+        <h3>Explore</h3>
+        <ul>
+          <li>Our Work</li>
+          <li>Services</li>
+          <li>Shop</li>
+          <li>FAQs</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Company</h3>
+        <ul>
+          <li>About Us</li>
+          <li>Contact Us</li>
+          <li>Our Glowup <span class="badge bg-success">New</span></li>
+          <li>Careers</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Want our secrets? Too bad.<br>(Just kidding, sign up and steal them)</h3>
+        <div class="subscribe mt-2">
+          <input type="email" placeholder="Enter your email" />
+          <button>Subscribe</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom mt-4">
+      <div>2025 © - HiPortfolio. All rights reserved.</div>
+      <div class="social-icons">
+        <a href="#"><i class="bi bi-linkedin fs-2"></i></a>
+        <a href="#"><i class="bi bi-instagram fs-2"></i></a>
+        <a href="#"><i class="bi bi-behance fs-2"></i></a>
+        <a href="#"><i class="bi bi-dribbble fs-2"></i></a>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>
