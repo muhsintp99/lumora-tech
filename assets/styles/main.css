@@ -712,6 +712,8 @@ body {
     font-size: 1.5rem;
   }
 
+
+  
   /* Services Header */
   .services-heading {
     flex-direction: column;
@@ -724,27 +726,79 @@ body {
   }
 
   /* About Section */
+ .about-shade {
+  flex-direction: column;
+  padding: 2rem;
+  border-radius: 30px;
+}
+
+.about-left h1 {
+  font-size: 2rem;
+}
+
+.about-left h2 {
+  font-size: 2.5rem;
+  letter-spacing: -2px;
+}
+
+.about-right {
+  font-size: 0.95rem;
+}
+
+/* ✅ Responsive CSS Starts Here */
+@media (max-width: 768px) {
   .about-shade {
-    flex-direction: column;
-    padding: 2rem;
-    border-radius: 30px;
+    padding: 1.5rem;
+    border-radius: 20px;
   }
 
   .about-left h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    text-align: center;
   }
 
   .about-left h2 {
-    font-size: 2.5rem;
-    letter-spacing: -2px;
+    font-size: 2rem;
+    letter-spacing: -1px;
+    text-align: center;
   }
 
   .about-right {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-shade {
+    padding: 1rem;
+    border-radius:15px;
+    width: 400px;
+    text-align: center;
   }
 
+  .about-left h1 {
+    font-size: 1.25rem;
+    text-align: center;
+    padding-left: 60px;
+    
+  }
 
-  
+  .about-left h2 {
+    font-size: 1.5rem;
+    text-align: center;
+     padding-left: 70px;
+
+    
+  }
+
+  .about-right {
+    font-size: 0.85rem;
+  text-align: center;
+  }
+}
+
   /* Carousel */
   .carousel-item {
     width: 120px;
@@ -1105,22 +1159,21 @@ body {
   .card2-head h1 {
     font-size: 36px;
     padding-left: 40px;
+        text-align: center;
+
   }
 
   .project-btn {
-    padding-right: 40px;
-    text-align: left;
+    padding-right: 2px;
+    text-align: center;
   }
 
   .project-btn p {
-    padding-left: 0;
-    text-align: left;
+    padding-left: 40px;
+    text-align: center;
   }
 
-  .see-btn {
-    font-size: 0.85rem;
-    padding: 8px 16px;
-  }
+
 }
 
 @media (max-width: 480px) {
@@ -1143,6 +1196,7 @@ body {
   .card2-head h1 {
     font-size: 28px;
     padding-left: 0;
+    text-align: left;
   }
 
   .project-btn {
@@ -1214,8 +1268,8 @@ body {
   justify-content: center;
   align-items: center;
   gap: 30px;
-  font-family: 'Anton', sans-serif;
-  font-weight: 300;
+  font-family:'Inter', sans-serif;
+  font-weight: 800;
   font-size: 50px;
   line-height: 1em;
   text-align: center;
@@ -1227,6 +1281,7 @@ body {
 
 .heading-text p {
   margin: 0;
+
 }
 
 .arrow {
@@ -1245,6 +1300,7 @@ body {
 /* Cards Container */
 .cards {
   display: flex;
+  font-family:'Inter', sans-serif;
   justify-content: center;
   align-items: stretch;
   flex-wrap: wrap;
@@ -1269,6 +1325,7 @@ body {
   justify-content: space-between;
   position: relative;
   z-index: 1;
+  color:rgb(48, 46, 46);
 }
 
 .card1 {
@@ -1304,7 +1361,7 @@ body {
   width: 100%;
   font-size: 24px;
   font-weight: 600;
-  color: white;
+  color: rgb(8, 8, 8);
   position: absolute;
   bottom: 16px;
   left: 50%;
